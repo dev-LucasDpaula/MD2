@@ -2,16 +2,16 @@
 
 int main() {
 
-    printf("\n");
-    printf("QUESTÃO 2\n");
+    //printf("\n");
+    //printf("QUESTAO 2\n");
 
-    printf("Digite o número de chaves: ");
+    //printf("Digite o numero de chaves: ");
     int numero_chaves;
     scanf("%d", &numero_chaves);
     
-    printf("\n");
+    //printf("\n");
 
-    printf("Digite as chaves: ");
+    //printf("Digite as chaves: ");
     int vetor[numero_chaves];
     for(int i = 0; i < (numero_chaves); i++){
         scanf("%d", &vetor[i]);
@@ -20,30 +20,30 @@ int main() {
     int ativas = 0;
     int ano = 0;
 
-    printf("\n");
-    printf("Começando Verificação\n");
+    //printf("\n");
+    //printf("Começando Verificacao\n");
 
     while (ativas == 0 && ano < 50){
 
         ano++;
         ativas = 1;
         
-        printf("\n");
-        printf("Ano: %d\n", ano);
+        //printf("\n");
+        //printf("Ano: %d\n", ano);
 
         for(int i = 0; i < (numero_chaves); i++){
             if (ano % vetor[i] != 0){
                 ativas = 0;
-                printf("Ano %d: Chave %d está inativo.\n", ano, i+1);
+                //printf("Ano %d: Chave %d esta inativo.\n", ano, vetor[i]);
                 break;
             }
         }
     }
 
     if (ativas == 1){
-        printf("Ano em que todas estão ativas: %d\n", ano);
+        printf("Ano em que todas estao ativas: %d\n", ano);
     } else {
-        printf("Não há ano em que todas então ativas.\n");
+        printf("Nao ha ano em que todas entao ativas.\n");
     }
 
 }
