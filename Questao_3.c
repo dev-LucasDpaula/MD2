@@ -1,5 +1,12 @@
 #include <stdio.h>
 
+long long integer_pow(int base, int expoente) {
+    long long resultado = 1;
+    for (int i = 0; i < expoente; i++) {
+        resultado *= base;
+    }
+    return resultado;
+
 int main() {
     int n;
     printf("--- Questao 03: A Razao de Eficiencia de um Numero ---\n");
@@ -60,5 +67,27 @@ int main() {
          printf("O numero 1 nao possui fatores primos.\n");
     }
 
+        // --- Passo 2: Cálculo de tau(N) e sigma(N) ---
+    long long tau_n = 1;
+    long long sigma_n = 1;
+
+    // Calcula tau(N) e sigma(N)
+    for (int i = 0; i < numFatoresDistintos; i++) {
+        int p = fatoresPrimos[i];
+        int a = expoentes[i];
+        
+        tau_n *= (a + 1);
+        sigma_n *= (integer_pow(p, a + 1) - 1) / (p - 1);
+    }
+    
+    // Tratamento especial para N=1
+    if (n == 1) {
+        tau_n = 1;
+        sigma_n = 1;
+    }
+
+    printf("\n--- Passo 2: Calculo de tau(N) e sigma(N) ---\n");
+    printf("Calculo de tau(N) (numero de divisores): %lld\n", tau_n);
+    printf("Calculo de sigma(N) (soma dos divisores): %lld\n", sigma_n);
 
 }
