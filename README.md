@@ -1,6 +1,6 @@
 # MD2
 Matemática Discreta 2
-Reposta das Linhas - Questão 4
+# Reposta das Linhas - Questão 4
 -Linha 10 [1] = "b"
 -Linha 14 [2] = "resto"
 -Linha 23 [3] = "mdcComPassos"
