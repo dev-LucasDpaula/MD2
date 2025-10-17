@@ -25,9 +25,12 @@ int main() {
                 ativas = false;
             }
         }
+    }
 
+    if (ativas == true){
+        printf("Ano em que todas estão ativas: %d\n", ano);
+    } else {
+        printf("Não há ano em que todas então ativas.\n");
     }
 
 }
-
-Co-authored-by: dev-LucasDpaula <dev-LucasDpaula@users.noreply.github.com>
