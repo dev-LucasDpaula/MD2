@@ -6,6 +6,7 @@ long long integer_pow(int base, int expoente) {
         resultado *= base;
     }
     return resultado;
+}
 
 int main() {
     int n;
