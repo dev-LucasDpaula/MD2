@@ -90,4 +90,16 @@ int main() {
     printf("Calculo de tau(N) (numero de divisores): %lld\n", tau_n);
     printf("Calculo de sigma(N) (soma dos divisores): %lld\n", sigma_n);
 
+        // --- Passo 3: Cálculo da Razão de Eficiência ---
+    double razao = 0.0;
+    if (tau_n != 0) {
+        // Cast para double para garantir a divisão de ponto flutuante
+        razao = (double)sigma_n / tau_n;
+    }
+
+    printf("\n--- Passo 3: Resultado Final ---\n");
+    // Usando "%.2f" no printf para formatar com 2 casas decimais
+    printf("A Razao de Eficiencia de %d e: %.2f\n", n, razao);
+
+    return 0;
 }
