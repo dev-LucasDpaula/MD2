@@ -2,27 +2,39 @@
 
 int main() {
 
-    int numero_itens;
+    printf("\n");
+    printf("QUESTÃO 2\n");
 
-    scanf("%d", &numero_itens);
+    printf("Digite o número de chaves: ");
+    int numero_chaves;
+    scanf("%d", &numero_chaves);
+    
+    printf("\n");
 
-    int vetor[numero_itens];
-
-    for(int i = 0; i < (numero_itens); i++){
+    printf("Digite as chaves: ");
+    int vetor[numero_chaves];
+    for(int i = 0; i < (numero_chaves); i++){
         scanf("%d", &vetor[i]);
     }
 
     int ativas = 0;
     int ano = 0;
 
+    printf("\n");
+    printf("Começando Verificação\n");
+
     while (ativas == 0 && ano < 50){
 
         ano++;
         ativas = 1;
+        
+        printf("\n");
+        printf("Ano: %d\n", ano);
 
-        for(int i = 0; i < (numero_itens); i++){
+        for(int i = 0; i < (numero_chaves); i++){
             if (ano % vetor[i] != 0){
                 ativas = 0;
+                printf("Ano %d: Chave %d está inativo.\n", ano, i+1);
                 break;
             }
         }
