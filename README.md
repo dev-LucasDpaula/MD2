@@ -1,7 +1,7 @@
 # MD2
 Matemática Discreta 2
 ## Resposta das Linhas - Questão 4
-```
+```c
 <ins>Linha 10</ins> [1] = "b";
 <ins>Linha 14</ins> [2] = "resto";
 <ins>Linha 23</ins> [3] = "mdcComPassos";
