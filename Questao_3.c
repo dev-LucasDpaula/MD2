@@ -11,6 +11,8 @@ long long integer_pow(int base, int expoente) {
 int main() {
     int n;
     printf("--- Questao 03: A Razao de Eficiencia de um Numero ---\n");
+    printf("Lucas Oliveira de Paula - 241011386\n");
+    printf("Pedro Henrique Americo de Sa - 241025980\n");
     printf("Digite um numero inteiro N (1 <= N <= 105): ");
     scanf("%d", &n);
 
