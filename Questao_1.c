@@ -4,21 +4,8 @@
 #include <ctype.h>
 #include <math.h>
 
-// Para garantir a compatibilidade e evitar overflow, usamos long long para os números grandes.
 typedef long long int lli;
 
-// ---------------------------------------------------------------------------------
-// FUNÇÕES MATEMÁTICAS FUNDAMENTAIS (Implementadas pelo Aluno)
-// ---------------------------------------------------------------------------------
-
-/**
- * @brief Calcula o Máximo Divisor Comum (MDC) entre dois números usando o Algoritmo de Euclides.
- * A função também imprime cada passo do cálculo para fins didáticos, conforme solicitado.
- * @param a Primeiro número.
- * @param b Segundo número.
- * @param print_steps Flag para controlar a impressão dos passos (1 = imprimir, 0 = não imprimir).
- * @return O MDC de a e b.
- */
 lli mdc(lli a, lli b, int print_steps) {
     if (print_steps) {
         printf(" -> Calculando mdc(%lld, %lld) com Algoritmo de Euclides:\n", a, b);
@@ -39,14 +26,6 @@ lli mdc(lli a, lli b, int print_steps) {
     return a;
 }
 
-/**
- * @brief Encontra o inverso modular de 'a' em relação a 'm' usando o Algoritmo Estendido de Euclides.
- * A função encontra 'x' tal que (a * x) % m = 1.
- * Também imprime os passos do algoritmo.
- * @param a O número para o qual encontrar o inverso.
- * @param m O módulo.
- * @return O inverso modular de 'a'.
- */
 lli inverso_modular(lli a, lli m) {
     lli m0 = m, t, q;
     lli x0 = 0, x1 = 1;
@@ -76,12 +55,7 @@ lli inverso_modular(lli a, lli m) {
     return x1;
 }
 
-/**
- * @brief Implementa o método Rho de Pollard para fatorar um número N.
- * Utiliza a função de iteração g(x) = (x^2 + 1) mod N. Exibe cada passo.
- * @param n O número composto a ser fatorado.
- * @return Um fator não trivial de n.
- */
+
 lli pollard_rho(lli n) {
     if (n % 2 == 0) return 2;
 
@@ -114,13 +88,6 @@ lli pollard_rho(lli n) {
     return d;
 }
 
-/**
- * @brief Calcula (base^exp) % mod usando o método de exponenciação por quadratura.
- * @param base A base da exponenciação.
- * @param exp O expoente.
- * @param mod O módulo.
- * @return O resultado de (base^exp) % mod.
- */
 lli exponenciacao_modular(lli base, lli exp, lli mod) {
     lli res = 1;
     base %= mod;
@@ -132,35 +99,6 @@ lli exponenciacao_modular(lli base, lli exp, lli mod) {
     return res;
 }
 
-// =====================================================================
-// NOVAS FUNÇÕES ADICIONADAS PARA CUMPRIR TODOS OS REQUISITOS
-// =====================================================================
-
-/**
- * @brief [NOVO] Calcula tau(n), o número de divisores de n.
- * Para n = p*q (com p e q primos distintos), tau(n) = (1+1)*(1+1) = 4.
- * @param p Primeiro fator primo.
- * @param q Segundo fator primo.
- * @return O número de divisores de n.
- */
-lli tau_n(lli p, lli q) {
-    return 4; 
-}
-
-/**
- * @brief [NOVO] Calcula sigma(n), a soma dos divisores de n.
- * Para n = p*q, sigma(n) = (p+1)*(q+1).
- * @param p Primeiro fator primo.
- * @param q Segundo fator primo.
- * @return A soma dos divisores de n.
- */
-lli sigma_n(lli p, lli q) {
-    return (p + 1) * (q + 1);
-}
-
-// ---------------------------------------------------------------------------------
-// FUNÇÃO MAIN - Orquestra as 3 Etapas
-// ---------------------------------------------------------------------------------
 int main() {
     printf("===============================================================\n");
     printf("  PROJETO DE PROGRAMACAO: SISTEMA RSA COM FATORACAO DE POLLARD \n");
@@ -216,16 +154,6 @@ int main() {
     lli d = inverso_modular(e, z);
     printf("\n");
 
-    // [NOVO] Seção adicionada para cumprir o requisito de cálculos intermediários.
-    printf("5. Calculos Intermediarios de Teoria dos Numeros para n = %lld:\n", n);
-    lli tau_val = tau_n(p, q);
-    lli sigma_val = sigma_n(p, q);
-    double eficiencia = (double)sigma_val / n;
-    printf("   a) Numero de Divisores, tau(n): Como n = p*q, tau(n) = (1+1)*(1+1) = %lld\n", tau_val);
-    printf("   b) Soma dos Divisores, sigma(n): Como n = p*q, sigma(n) = (p+1)*(q+1) = %lld\n", sigma_val);
-    printf("   c) Razao de Eficiencia, sigma(n)/n: %.4f\n\n", eficiencia);
-
-
     printf(">> CHAVES GERADAS:\n");
     printf("   - Chave Publica: (n, e) = (%lld, %lld)\n", n, e);
     printf("   - Chave Privada: (n, d) = (%lld, %lld)\n\n", n, d);
@@ -261,7 +189,7 @@ int main() {
     }
     printf("\n\n");
 
-    // [MODIFICADO] Justificativa dos teoremas agora é mais detalhada e mostra a decisão.
+    // Justificativa dos teoremas agora é mais detalhada e mostra a decisão.
     printf("2. Codificacao (Criptografia) | C = M^e mod n\n");
     printf("   Justificativa do Teorema para Reducao de Expoente:\n");
     printf("   - Verificando as condicoes do modulo n = %lld:\n", n);
