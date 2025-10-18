@@ -2,13 +2,13 @@
 Matemática Discreta 2
 ## Resposta das Linhas - Questão 4
 ```c
-<ins>Linha 10</ins> [1] = "b";
-<ins>Linha 14</ins> [2] = "resto";
-<ins>Linha 23</ins> [3] = "mdcComPassos";
-<ins>Linha 36</ins> [4] = "B";
-<ins>Linha 45</ins> [5] = "exp % 2 != 0";
-<ins>Linha 72</ins> [6] = "inversoModular";
-<ins>Linha 78</ins> [7] = "powMod".
+Linha 10 [1] = "b";
+Linha 14 [2] = "resto";
+Linha 23 [3] = "mdcComPassos";
+Linha 36 [4] = "B";
+Linha 45 [5] = "exp % 2 != 0";
+Linha 72 [6] = "inversoModular";
+Linha 78 [7] = "powMod".
 ```
 ## Saída Final Completa do Código
 Insira H: 7
