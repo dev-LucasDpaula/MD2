@@ -100,6 +100,8 @@ lli exponenciacao_modular(lli base, lli exp, lli mod) {
 }
 
 int main() {
+    printf("Lucas Oliveira de Paula - 241011386\n");
+    printf("Pedro Henrique Americo de Sa - 241025980\n");
     printf("===============================================================\n");
     printf("  PROJETO DE PROGRAMACAO: SISTEMA RSA COM FATORACAO DE POLLARD \n");
     printf("===============================================================\n\n");
