@@ -7,6 +7,9 @@ int main() {
 
     printf("\n");
     printf("QUESTAO 2\n");
+    printf("Lucas Oliveira de Paula - 241011386\n");
+    printf("Pedro Henrique Americo de Sa - 241025980\n");
+
 
     printf("Digite o numero de chaves: ");
     int numero_chaves;
