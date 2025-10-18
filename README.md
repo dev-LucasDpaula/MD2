@@ -11,6 +11,7 @@ Linha 72 [6] = "inversoModular";
 Linha 78 [7] = "powMod".
 ```
 ## Saída Final Completa do Código
+```
 Insira H: 7
 Insira G: 3
 Insira Zn: 11
@@ -27,3 +28,4 @@ Fazendo a multiplicação modular: 7 * 4 mod 11 = 6
 Sendo 4 o inverso de 3.
 
 Valor final da congruência: 4
+```
