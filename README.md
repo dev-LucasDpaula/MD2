@@ -29,3 +29,10 @@ Sendo 4 o inverso de 3.
 
 Valor final da congruência: 4
 ```
+## Respostas do V ou F
+```
+**V**
+**F**
+**V**
+**F**
+```
