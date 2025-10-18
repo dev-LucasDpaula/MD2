@@ -1,5 +1,5 @@
 # MD2
-Matemática Discreta 2
+Questão 4
 ## Resposta das Linhas - Questão 4
 ```c
 Linha 10 [1] = "b";
